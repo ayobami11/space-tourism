@@ -1,0 +1,133 @@
+.mainHeading {
+    margin: 2em 5%;
+
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+}
+
+.mainHeading::before {
+    content: '01';
+
+    color: rgba(var(--white-rgb), 0.25);
+    font-weight: 700;
+}
+
+.section {
+    margin: 2em 5%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.sectionText {
+    text-align: center;
+    max-width: calc(573px + 5vw);
+}
+
+.imgWrapper {
+    position: relative;
+    aspect-ratio: 1;
+    width: 80%;
+    max-width: 225px;
+}
+
+.img {
+    background: rgba(122, 122, 122, 0.25);
+    border-radius: 50%;
+}
+
+.nav {
+    margin: 1em 0;
+}
+
+.navList {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.navLink {
+    padding: 0.5em 0;
+}
+
+.activeNavLink {
+    border-bottom: 3px solid currentColor;
+    color: rgb(var(--white-rgb));
+}
+
+.hr {
+    background: #383B4B;
+    border: none;
+    height: 1px;
+    margin: 1.5em 0;
+}
+
+.destinationTerms {
+    color: rgb(var(--light-blue-rgb));
+}
+
+.travelDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media (min-width: 481px) {
+    .imgWrapper {
+        max-width: 300px;
+    }
+}
+
+@media (min-width: 769px) {
+    .mainHeading {
+        justify-content: flex-start;
+    }
+
+    .imgWrapper {
+        max-width: 375px;
+    }
+}
+
+@media (min-width: 1025px) {
+
+    .section,
+    .mainHeading {
+        margin-left: 10%;
+        margin-right: 10%;
+        margin-top: 0;
+    }
+
+    .mainHeading {
+            justify-content: flex-start;
+        }
+
+    .section {
+        flex-direction: row;
+        justify-content: space-evenly;
+        gap: calc(2em + 5vw);
+    }
+
+    .sectionText {
+        text-align: left;
+        max-width: 445px;
+    }
+
+    .navList {
+        justify-content: flex-start;
+    }
+
+    .imgWrapper {
+        min-width: 375px;
+        flex: 1;
+        max-width: 445px;
+    }
+
+    .travelDetails {
+        flex-direction: row;
+        gap: calc(2em + 3vw);
+    }
+}

@@ -1,0 +1,99 @@
+.crewSection {
+    margin: 0 5%;
+    text-align: center;
+}
+
+.mainHeading {
+    margin: 2em 5%;
+
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+}
+
+.mainHeading::before {
+    content: '02';
+
+    color: rgba(var(--white-rgb), 0.25);
+    font-weight: 700;
+}
+
+.figure {
+    display: flex;
+    flex-direction: column;
+}
+
+.imgWrapper {
+    position: relative;
+    max-width: calc(200px + 2vw);
+    margin: 0 auto;
+    width: 90%;
+}
+
+.crewImg {
+}
+
+.hr {
+    background: rgb(56, 59, 75);
+    border: none;
+    height: 1px;
+
+    margin-top: -7px;
+}
+
+.figcaption {
+    margin-top: 3em;
+}
+
+.role {
+    color: rgba(var(--white-rgb), 0.495);
+}
+
+@media (min-width: 769px) {
+    .mainHeading {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1025px) {
+    .mainHeading {
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+
+    .figure {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-end;
+        height: 75.2vh;
+
+    }
+
+    .imgWrapper {
+        margin: 0;
+        max-width: 400px;
+        max-height: 540px;
+
+        /* ensures the image takes the complete height of its container (i.e. align-items: stretch) */
+        display: flex;
+        
+        /* flex-shrink: 0; */
+    }
+
+    .img {
+        object-fit: scale-down;
+        height: auto;
+        width: 100%;
+    }
+
+    .hr {
+        display: none;
+    }
+
+    .figcaption {
+        align-self: flex-start;
+        text-align: left;
+        margin-top: 5em;
+        max-width: 615px;
+    }
+}

@@ -1,0 +1,167 @@
+.mainHeading {
+    margin: 1em 5%;
+
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+}
+
+.mainHeading::before {
+    content: '03';
+
+    color: rgba(var(--white-rgb), 0.25);
+    font-weight: 700;
+}
+
+.section {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.sectionHeader {
+    margin: 1em 0;
+}
+
+.sectionHeaderTerm {
+    color: rgb(var(--light-blue-rgb));
+}
+
+.sectionHeaderTerm::after {
+    content: '...';
+}
+
+.sectionText {
+    margin: 2.5em 5%;
+    max-width: 470px;
+    text-align: center;
+
+    align-self: center;
+}
+
+.imgWrapper {
+    position: relative;
+    max-height: 170px;
+
+    overflow: hidden;
+}
+
+.img {
+    background: rgb(var(--dark-blue-rgb));
+    height: auto;
+    width: 100%;
+}
+
+.imgDesktop {
+    display: none;
+}
+
+.techIndexNavMobile {
+    margin: 2em 0;
+
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.techIndexNavDesktop {
+    display: none;
+}
+
+.techIndexLink {
+    background: transparent;
+    border: 1px solid rgba(var(--white-rgb), 0.25);
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: clamp(1rem, 3.1275vw, 2rem);
+    width: clamp(40px, 7.8vw, 80px);
+    aspect-ratio: 1;
+
+    transition: border 0.5s;
+}
+
+.techIndexLink:hover {
+    border-color: rgb(var(--white-rgb));
+}
+
+.activeTechIndexLink {
+    background: rgb(var(--white-rgb));
+    color: rgb(var(--dark-blue-rgb));
+}
+
+@media (min-width: 481px) {
+    .imgWrapper {
+        max-height: calc(170px + 18.25vw);
+    }
+}
+
+
+@media (min-width: 769px) {
+    .mainHeading {
+        justify-content: flex-start;
+    }
+}
+
+@media (min-width: 1025px) {
+    .mainHeading {
+        justify-content: flex-start;
+    }
+    
+    .imgMobile {
+        display: none;
+    }
+    
+    .imgDesktop {
+        display: block;
+    }
+    
+    .section {
+        display: contents;
+    }
+
+    .sectionText {
+        margin: 0;
+    }
+    
+    .imgWrapper {
+        min-width: 400px;
+        flex: 1 0 400px;
+        max-width: 515px;
+        aspect-ratio: 515 / 527;
+        max-height: none;
+    }
+    
+    .img {
+        max-width: 100%;
+    }
+
+    .techIndexNavMobile {
+        display: none;
+    }
+    
+    .techIndexNavDesktop {
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+    }
+
+    .mainHeading,
+    .pageFlexWrapper {
+        margin-left: 10%;
+    }
+
+    .pageFlexWrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: calc(3em + 3vw);
+
+        margin-bottom: 5em;
+    }
+
+    .sectionText {
+        text-align: left;
+    }
+}

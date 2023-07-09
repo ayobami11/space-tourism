@@ -1,0 +1,72 @@
+.menu {
+    height: 100vh;
+    transform: translateX(100vw);
+    transition: transform 0.3s cubic-bezier(0, 0.52, 0, 1);
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    
+    padding: 10em 4em;
+    padding-right: 0;
+    
+    background: rgba(var(--white-rgb), 0.04);
+    backdrop-filter: blur(40.774227142333984px);
+}
+
+.menuOpen {
+    transform: translateX(0);
+    z-index: 10;
+}
+
+.menuList {
+    list-style: none;
+    counter-reset: nav-counter;
+    font-size: 1rem;
+    max-width: 254px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2em;
+}
+
+.menuItem {
+    color: rgb(var(--white-rgb));
+    counter-increment: nav-counter;
+    cursor: pointer;
+
+    display: inline-flex;
+    gap: 1em;
+
+    position: relative;
+    padding-right: calc(3em + 20vw);
+    z-index: 15;
+}
+
+.menuItem:hover {
+    border-right: 4px solid rgba(var(--white-rgb), 0.5);
+}
+
+.menuItem:first-of-type::before {
+    /* This is needed to start counting from 0 */
+    /* https://css-tricks.com/almanac/properties/c/counter-set/ */
+    counter-set: nav-counter;
+}
+
+.menuItem::before {
+    content: '0' counter(nav-counter);
+    font-weight: 700;
+}
+
+.activeMenuItem {
+    border-right: 4px solid rgb(var(--white-rgb));
+}
+
+
+
+@media (min-width: 769px) {
+    .menu {
+        display: none;
+    }
+}
