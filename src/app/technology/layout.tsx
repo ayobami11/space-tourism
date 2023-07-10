@@ -1,9 +1,7 @@
-'use client'
-
 import { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+
+import NavMenu from "./NavMenu";
 
 import styles from './technology.module.css';
 
@@ -19,24 +17,12 @@ const TechnologyLayout = ({
     children: React.ReactNode
 }) => {
 
-    const pathName = usePathname();
-
     return (
         <div className={styles.pageWrapper}>
             <h1 className={`heading5 ${styles.mainHeading}`}>Space launch 101</h1>
 
             <div className={`${styles.pageFlexWrapper}`}>
-                <nav className={styles.techIndexNavDesktop}>
-                    <Link
-                        className={`heading4 ${styles.techIndexLink} ${pathName === '/technology/launch-vehicle' ? styles.activeTechIndexLink : ''}`}
-                        href='/technology/launch-vehicle'>1</Link>
-                    <Link
-                        className={`heading4 ${styles.techIndexLink} ${pathName === '/technology/spaceport' ? styles.activeTechIndexLink : ''}`}
-                        href='/technology/spaceport'>2</Link>
-                    <Link
-                        className={`heading4 ${styles.techIndexLink} ${pathName === '/technology/space-capsule' ? styles.activeTechIndexLink : ''}`}
-                        href='/technology/space-capsule'>3</Link>
-                </nav>
+                <NavMenu />
 
 
                 {children}
@@ -71,5 +57,6 @@ const TechnologyLayout = ({
         </div>
     )
 }
+
 
 export default TechnologyLayout;
