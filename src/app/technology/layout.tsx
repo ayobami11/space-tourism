@@ -1,21 +1,23 @@
 'use client'
 
+import { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Metadata } from "next";
 
 import styles from './technology.module.css';
+
+export const dynamicParams = false;
 
 export const metadata: Metadata = {
     title: 'Technology'
 }
 
-export default function TechnologyLayout({
+const TechnologyLayout = ({
     children,
 }: {
     children: React.ReactNode
-}) {
+}) => {
 
     const pathName = usePathname();
 
@@ -69,3 +71,5 @@ export default function TechnologyLayout({
         </div>
     )
 }
+
+export default TechnologyLayout;

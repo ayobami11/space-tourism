@@ -207,3 +207,11 @@ a {
     display: block;
   }
 }
+
+/* For not found page */
+.not-found-div {
+  display: grid;
+  place-items: center;
+
+  min-height: 80vh;
+}

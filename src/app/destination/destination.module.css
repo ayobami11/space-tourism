@@ -22,11 +22,6 @@
     gap: 2em;
 }
 
-.sectionText {
-    text-align: center;
-    max-width: calc(573px + 5vw);
-}
-
 .imgWrapper {
     position: relative;
     aspect-ratio: 1;
@@ -37,6 +32,11 @@
 .img {
     background: rgba(122, 122, 122, 0.25);
     border-radius: 50%;
+}
+
+.sectionText {
+    text-align: center;
+    max-width: calc(573px + 5vw);
 }
 
 .nav {
@@ -72,8 +72,8 @@
 .travelDetails {
     display: flex;
     flex-direction: column;
+    gap: 1.5em;
 }
-
 
 
 @media (min-width: 481px) {
@@ -90,10 +90,14 @@
     .imgWrapper {
         max-width: 375px;
     }
+
+    .travelDetails {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 @media (min-width: 1025px) {
-
     .section,
     .mainHeading {
         margin-left: 10%;
@@ -102,13 +106,19 @@
     }
 
     .mainHeading {
-            justify-content: flex-start;
-        }
+        justify-content: flex-start;
+    }
 
     .section {
         flex-direction: row;
         justify-content: space-evenly;
         gap: calc(2em + 5vw);
+    }
+
+    .imgWrapper {
+        min-width: 375px;
+        flex: 1;
+        max-width: 445px;
     }
 
     .sectionText {
@@ -120,14 +130,8 @@
         justify-content: flex-start;
     }
 
-    .imgWrapper {
-        min-width: 375px;
-        flex: 1;
-        max-width: 445px;
-    }
-
     .travelDetails {
-        flex-direction: row;
+        justify-content: flex-start;
         gap: calc(2em + 3vw);
     }
 }

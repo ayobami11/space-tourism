@@ -18,10 +18,6 @@
     display: contents;
 }
 
-.mainHeading {
-    /* margin: 0.125em 0; */
-}
-
 .exploreBtn {
     background: rgb(var(--white-rgb));
     color: rgb(var(--dark-blue-rgb));
@@ -45,7 +41,11 @@
     box-shadow: 0 0 0 2.125em rgba(var(--white-rgb), 0.1036);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
+    .bgText {
+            max-width: 445px;
+        }
+
     .exploreBtn {
         font-size: 2rem;
         width: 242px;
@@ -53,7 +53,7 @@
     }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .bgTextWrapper {
         flex-direction: row;
         justify-content: space-between;
@@ -61,10 +61,7 @@
 
         margin-left: 10%;
         margin-right: 10%;
-    }
-
-    .bgText {
-        max-width: 445px;
+        text-align: left;
     }
     
     .exploreBtn {

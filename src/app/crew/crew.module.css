@@ -1,6 +1,8 @@
 .crewSection {
     margin: 0 5%;
     text-align: center;
+    
+    height: 100%;
 }
 
 .mainHeading {
@@ -28,30 +30,39 @@
     max-width: calc(200px + 2vw);
     margin: 0 auto;
     width: 90%;
-}
 
-.crewImg {
+    display: flex;
 }
 
 .hr {
     background: rgb(56, 59, 75);
     border: none;
     height: 1px;
-
-    margin-top: -7px;
-}
-
-.figcaption {
-    margin-top: 3em;
 }
 
 .role {
     color: rgba(var(--white-rgb), 0.495);
+    display: block;
+}
+
+@media (max-width: 768px) {   
+    .figcaptionHeader {
+        margin: 1em 0;
+    }
 }
 
 @media (min-width: 769px) {
     .mainHeading {
         justify-content: flex-start;
+    }
+
+    .figure {
+        flex-direction: column-reverse;
+        gap: 3em;
+    }
+
+    .hr {
+        height: 0;
     }
 }
 
@@ -66,7 +77,6 @@
         justify-content: space-between;
         align-items: flex-end;
         height: 75.2vh;
-
     }
 
     .imgWrapper {
@@ -76,16 +86,14 @@
 
         /* ensures the image takes the complete height of its container (i.e. align-items: stretch) */
         display: flex;
-        
-        /* flex-shrink: 0; */
     }
-
+    
     .img {
         object-fit: scale-down;
         height: auto;
         width: 100%;
     }
-
+    
     .hr {
         display: none;
     }
@@ -95,5 +103,10 @@
         text-align: left;
         margin-top: 5em;
         max-width: 615px;
+    }
+
+    .mainHeading,
+    .crewSection {
+        margin-left: 10%;
     }
 }

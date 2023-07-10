@@ -26,7 +26,6 @@ const DestinationPage = ({ params }: { params: { name: string } }) => {
 
     const currentDestination = destinations.find((destination: Destination) => params.name === destination.name.toLowerCase());
 
-
     return (
         <article>
             {

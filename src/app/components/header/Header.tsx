@@ -13,14 +13,16 @@ import logo from '../../../../public/assets/images/logo.svg';
 import HamburgerButton from '../hamburger/HamburgerButton';
 import HamburgerMenu from '../hamburger/HamburgerMenu';
 
-export default function Home() {
+const Home = () => {
 
     const router = useRouter();
     const pathName = usePathname();
 
     return (
         <header className={styles.header}>
-            <Image className={styles.logo} src={logo} alt='Space Tourism logo' />
+            <a href="https://github.com/ayobami11/space-tourism" target="_blank" rel="noreferrer noopener" title="Github link">
+                <Image className={styles.logo} src={logo} alt='Space Tourism logo' />
+            </a>
 
             <div className={styles.horizontalLine}></div>
 
@@ -60,3 +62,5 @@ export default function Home() {
         </header>
     )
 }
+
+export default Home;

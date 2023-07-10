@@ -22,6 +22,7 @@ const CrewCarousel = () => {
     useEffect(() => {
         // Object with parameters
         const params = {
+            autoHeight: true,
             loop: true,
             autoplay: {
                 delay: 5000
@@ -29,18 +30,29 @@ const CrewCarousel = () => {
             pagination: {
                 clickable: true,
             },
+            breakpoints: {
+                769: {
+                    autoHeight: true
+                },
+                1025: {
+                    autoHeight: false
+                }
+            },
             injectStyles: [
                 `  
                     .swiper {
                         display: flex;
                         flex-direction: column-reverse;
-                    }
 
+                        padding-bottom: 4em;
+                    }
+                    
                     .swiper-pagination {
-                        // border: 1px solid red;
                         position: absolute;
-                    }
 
+                        bottom: 5% !important;
+                    }
+                    
                     .swiper-pagination-bullets {
                         display: flex;
                         justify-content: center;
@@ -61,8 +73,22 @@ const CrewCarousel = () => {
                     .swiper-pagination-bullet-active {
                         background: rgb(var(--white-rgb));
                     }
+
+                    @media (min-width: 769px) {
+                        .swiper {
+                            padding-bottom: 0;
+                        }
+
+                        .swiper-pagination {
+                            bottom: 59% !important;
+                        }
+                    }
                     
                     @media (min-width: 1025px) {
+                        .swiper {
+                            padding-bottom: 0;
+                        }
+
                         .swiper-pagination {
                             bottom: 5% !important;
                         }
@@ -78,7 +104,7 @@ const CrewCarousel = () => {
                             width: 15px;
                         }
                     }
-
+                    
                     @media (min-width: 1100px) {
                         .swiper-pagination {
                             bottom: 15% !important;

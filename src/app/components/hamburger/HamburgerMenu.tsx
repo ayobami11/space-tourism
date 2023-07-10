@@ -1,44 +1,50 @@
 'use client'
 
-import Link from "next/link";
-
 import { useRouter, usePathname } from 'next/navigation';
 
 import styles from './hamburgerMenu.module.css';
 
 import { useAppContext } from '../../contexts/app';
 
-export default function HamburgerMenu() {
+const HamburgerMenu = () => {
 
-    const { state } = useAppContext();
+    const { state, dispatch } = useAppContext();
 
     const router = useRouter();
     const pathName = usePathname();
 
+    const navigateTo = (route: string): void => {
+        
+        dispatch({ type: 'CLOSE_MENU' });
+        router.push(`/${route}`);
+    }
+
     return (
         <nav className={`navText ${styles.menu} ${state.isMenuOpen ? styles.menuOpen : ''}`}>
             <ol className={styles.menuList}>
-                <li 
-                className={`${styles.menuItem} ${pathName.startsWith('/home') ? styles.activeMenuItem : ''}`}
-                onClick={() => router.push('/home')}>
+                <li
+                    className={`${styles.menuItem} ${pathName.startsWith('/home') ? styles.activeMenuItem : ''}`}
+                    onClick={() => navigateTo('home')}>
                     Home
                 </li>
-                <li 
-                className={`${styles.menuItem} ${pathName.startsWith('/destination') ? styles.activeMenuItem : ''}`}
-                onClick={() => router.push('/destination')}>
+                <li
+                    className={`${styles.menuItem} ${pathName.startsWith('/destination') ? styles.activeMenuItem : ''}`}
+                    onClick={() => navigateTo('destination')}>
                     Destination
                 </li>
-                <li 
-                className={`${styles.menuItem} ${pathName.startsWith('/crew') ? styles.activeMenuItem : ''}`}
-                onClick={() => router.push('/crew')}>
+                <li
+                    className={`${styles.menuItem} ${pathName.startsWith('/crew') ? styles.activeMenuItem : ''}`}
+                    onClick={() => navigateTo('crew')}>
                     Crew
                 </li>
-                <li 
-                className={`${styles.menuItem} ${pathName.startsWith('/technology') ? styles.activeMenuItem : ''}`}
-                onClick={() => router.push('/technology')}>
+                <li
+                    className={`${styles.menuItem} ${pathName.startsWith('/technology') ? styles.activeMenuItem : ''}`}
+                    onClick={() => navigateTo('technology')}>
                     Technology
                 </li>
             </ol>
         </nav>
     )
 }
+
+export default HamburgerMenu;

@@ -16,7 +16,7 @@ export async function generateStaticParams() {
     }));
 }
 
-export default function Page({ params }: { params: { name: string } }) {
+const TechnologyPage = ({ params }: { params: { name: string } }) => {
 
     const pathName = usePathname();
 
@@ -71,3 +71,5 @@ export default function Page({ params }: { params: { name: string } }) {
         </>
     )
 }
+
+export default TechnologyPage;

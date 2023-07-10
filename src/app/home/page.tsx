@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import styles from './home.module.css'
 
-const Home = () => {
+const HomePage = () => {
 
   return (
     <main className={styles.main}>
@@ -24,7 +24,7 @@ const Home = () => {
         </div>
         <Link
           className={`heading4 ${styles.exploreBtn}`}
-          href='/destination/moon'
+          href='/destination'
         >Explore</Link>
       </div>
 
@@ -59,4 +59,4 @@ const Home = () => {
   )
 }
 
-export default Home;
+export default HomePage;

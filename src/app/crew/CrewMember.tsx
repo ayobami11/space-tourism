@@ -21,9 +21,9 @@ const CrewMember = ({ name, images, role, bio }: Crew) => {
             </div>
             <hr className={styles.hr} />
             <figcaption className={styles.figcaption}>
-                <header>
-                    <h2 className={`heading3`}>{name}</h2>
+                <header className={styles.figcaptionHeader}>
                     <span className={`heading4 ${styles.role}`}>{role}</span>
+                    <h2 className={`heading3 ${styles.name}`}>{name}</h2>
                 </header>
                 <p>{bio}</p>
             </figcaption>

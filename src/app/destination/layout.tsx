@@ -10,11 +10,11 @@ export const metadata: Metadata = {
     title: 'Destination'
 }
 
-export default function DestinationLayout({
+const DestinationLayout = ({
     children,
 }: {
     children: React.ReactNode
-}) {
+}) => {
 
     return (
         <section className={styles.pageWrapper}>
@@ -51,3 +51,5 @@ export default function DestinationLayout({
         </section>
     )
 }
+
+export default DestinationLayout;

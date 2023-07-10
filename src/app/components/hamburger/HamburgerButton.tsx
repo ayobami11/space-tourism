@@ -2,7 +2,7 @@ import { useAppContext } from "../../contexts/app";
 
 import styles from './hamburgerButton.module.css';
 
-export default function HamburgerButton() {
+const HamburgerButton = () => {
     const { state, dispatch } = useAppContext();
 
     const toggleHamBtn = () => {
@@ -22,3 +22,5 @@ export default function HamburgerButton() {
         </button>
     )
 }
+
+export default HamburgerButton;

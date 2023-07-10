@@ -63,8 +63,6 @@
     border-right: 4px solid rgb(var(--white-rgb));
 }
 
-
-
 @media (min-width: 769px) {
     .menu {
         display: none;

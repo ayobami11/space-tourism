@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 const CrewLayout = ({ children }: { children: React.ReactNode }) => {
 
     return (
-        <div>
+        <div className={styles.pageWrapper}>
             <h1 className={`heading5 ${styles.mainHeading}`}>Meet your crew</h1>
 
             {children}
