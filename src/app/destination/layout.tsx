@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { Metadata } from "next";
+import type { Metadata } from "next";
 
 import styles from './destination.module.css';
 

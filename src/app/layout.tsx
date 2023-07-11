@@ -1,6 +1,6 @@
 import './globals.css';
 
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 
 import { barlow, barlow_condensed, bellefair } from './fonts';
 
