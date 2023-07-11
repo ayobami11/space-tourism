@@ -16,7 +16,7 @@
 .hamLine {
     width: 2rem;
     height: 0.25rem;
-    background: rgb(var(--white-rgb));
+    background: rgb(var(--light-blue-rgb));
     transition: all 0.3s linear;
     position: relative;
     transform-origin: 1px;

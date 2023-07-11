@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Space Tourism',
     description: 'This project is a collaboration between Frontendmentor, Scrimba, and Kevin Powell, by Ayobami Tunwase.',
     siteName: 'Space Tourism',
-    // url: '',
+    url: 'https://space-tourism-ayo.vercel.app',
     locale: 'en-US',
     type: 'website'
   }
