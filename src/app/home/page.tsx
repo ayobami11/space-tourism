@@ -6,7 +6,7 @@ import styles from './home.module.css'
 const HomePage = () => {
 
   return (
-    <main className={styles.main}>
+    <section>
 
       <div className={styles.bgTextWrapper}>
         <div className={styles.bgText}>
@@ -55,7 +55,7 @@ const HomePage = () => {
           sizes='100vw'
         />
       </div>
-    </main>
+    </section>
   )
 }
 
