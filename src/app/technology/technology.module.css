@@ -40,7 +40,8 @@
 
 .imgWrapper {
     position: relative;
-    max-height: 170px;
+    /* max-height: 170px; */
+    aspect-ratio: 374 / 170;
 
     overflow: hidden;
 }

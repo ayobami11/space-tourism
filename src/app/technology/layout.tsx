@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import Image from "next/image";
 
-import NavMenu from "./NavMenu";
+import DesktopNavMenu from "./DesktopNavMenu";
 
 import styles from './technology.module.css';
 
@@ -22,8 +22,7 @@ const TechnologyLayout = ({
             <h1 className={`heading5 ${styles.mainHeading}`}>Space launch 101</h1>
 
             <div className={`${styles.pageFlexWrapper}`}>
-                <NavMenu />
-
+                <DesktopNavMenu />
 
                 {children}
             </div>
@@ -34,24 +33,24 @@ const TechnologyLayout = ({
                     src='/assets/images/technology/background-technology-mobile.jpg'
                     alt=''
                     quality={100}
-                    sizes='100vw'
                     fill
+                    sizes='100vw'
                 />
                 <Image
                     className={`bgImage bgImageTablet`}
                     src='/assets/images/technology/background-technology-tablet.jpg'
                     alt=''
                     quality={100}
-                    sizes='100vw'
                     fill
+                    sizes='100vw'
                 />
                 <Image
                     className={`bgImage bgImageDesktop`}
                     src='/assets/images/technology/background-technology-desktop.jpg'
                     alt=''
                     quality={100}
-                    sizes='100vw'
                     fill
+                    sizes='100vw'
                 />
             </div>
         </div>

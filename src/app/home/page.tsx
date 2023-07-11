@@ -35,24 +35,24 @@ const HomePage = () => {
           src='/assets/images/home/background-home-mobile.jpg'
           alt=''
           quality={100}
-          sizes='100vw'
           fill
+          sizes='100vw'
         />
         <Image
           className={`bgImage bgImageTablet`}
           src='/assets/images/home/background-home-tablet.jpg'
           alt=''
           quality={100}
-          sizes='100vw'
           fill
+          sizes='100vw'
         />
         <Image
           className={`bgImage bgImageDesktop`}
           src='/assets/images/home/background-home-desktop.jpg'
           alt=''
           quality={100}
-          sizes='100vw'
           fill
+          sizes='100vw'
         />
       </div>
     </main>

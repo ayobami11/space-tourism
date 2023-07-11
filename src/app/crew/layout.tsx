@@ -21,24 +21,24 @@ const CrewLayout = ({ children }: { children: React.ReactNode }) => {
                     src='/assets/images/crew/background-crew-mobile.jpg'
                     alt=''
                     quality={100}
-                    sizes='100vw'
                     fill
+                    sizes='100vw'
                 />
                 <Image
                     className={`bgImage bgImageTablet`}
                     src='/assets/images/crew/background-crew-tablet.jpg'
                     alt=''
                     quality={100}
-                    sizes='100vw'
                     fill
+                    sizes='100vw'
                 />
                 <Image
                     className={`bgImage bgImageDesktop`}
                     src='/assets/images/crew/background-crew-desktop.jpg'
                     alt=''
                     quality={100}
-                    sizes='100vw'
                     fill
+                    sizes='100vw'
                 />
             </div>
         </div>

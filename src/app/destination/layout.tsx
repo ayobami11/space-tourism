@@ -28,24 +28,24 @@ const DestinationLayout = ({
                     src='/assets/images/destination/background-destination-mobile.jpg'
                     alt=''
                     quality={100}
-                    sizes='100vw'
                     fill
+                    sizes='100vw'
                 />
                 <Image
                     className={`bgImage bgImageTablet`}
                     src='/assets/images/destination/background-destination-tablet.jpg'
                     alt=''
                     quality={100}
-                    sizes='100vw'
                     fill
+                    sizes='100vw'
                 />
                 <Image
                     className={`bgImage bgImageDesktop`}
                     src='/assets/images/destination/background-destination-desktop.jpg'
                     alt=''
                     quality={100}
-                    sizes='100vw'
                     fill
+                    sizes='100vw'
                 />
             </div>
         </section>

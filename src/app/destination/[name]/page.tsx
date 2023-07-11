@@ -37,11 +37,9 @@ const DestinationPage = ({ params }: { params: { name: string } }) => {
                                     className={styles.img}
                                     src={currentDestination.images.webp}
                                     alt={currentDestination.name}
-                                    width={0}
-                                    height={0}
-                                    priority
-                                    style={{ width: '100%', height: 'auto' }}
                                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                                    fill
+                                    priority
                                 />
                             </div>
                             <div className={styles.sectionText}>

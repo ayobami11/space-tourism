@@ -15,9 +15,9 @@ const CrewMember = ({ name, images, role, bio }: Crew) => {
                     alt={name}
                     width={0}
                     height={0}
-                    priority
                     style={{ width: '100%', height: 'auto' }}
                     sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                    priority
                 />
             </div>
             <hr className={styles.hr} />

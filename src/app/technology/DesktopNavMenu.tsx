@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation";
 
 import styles from './technology.module.css';
 
-const NavMenu = () => {
+const DesktopNavMenu = () => {
     const pathName = usePathname();
 
     return (
@@ -23,4 +23,4 @@ const NavMenu = () => {
     )
 }
 
-export default NavMenu;
+export default DesktopNavMenu;

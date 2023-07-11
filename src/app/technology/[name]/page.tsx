@@ -50,21 +50,17 @@ const TechnologyPage = ({ params }: { params: { name: string } }) => {
                                 className={`${styles.img} ${styles.imgMobile}`}
                                 src={currentTechnology.images.landscape}
                                 alt={currentTechnology.name}
-                                width={0}
-                                height={0}
-                                priority
-                                style={{ width: '100%', height: 'auto' }}
                                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                                fill
+                                priority
                             />
                             <Image
                                 className={`${styles.img} ${styles.imgDesktop}`}
                                 src={currentTechnology.images.portrait}
                                 alt={currentTechnology.name}
-                                width={0}
-                                height={0}
-                                priority
-                                style={{ width: '100%', height: 'auto' }}
                                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+                                fill
+                                priority
                             />
                         </div>
                     </section>
